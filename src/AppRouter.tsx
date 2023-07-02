@@ -20,7 +20,9 @@ function createRoutes() {
     <Route path="/">
       <Route index element={<Welcome />} />
       <Route path="/" element={<AppLayout />}>
-        <Route path="home" element={<Home />} />
+        <Route path="home" element={<Home />}>
+          <Route path=":section" />
+        </Route>
       </Route>
     </Route>
   );
